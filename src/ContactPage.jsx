@@ -1,15 +1,11 @@
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = () => {
-    if (!formData.name || !formData.email || !formData.message) return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // For demo purposes, just show submitted
     setSubmitted(true);
   };
 
@@ -462,11 +458,11 @@ export default function ContactPage() {
               <div className="c-success-icon">✓</div>
               <div className="c-success-title">Message Received</div>
               <p className="c-success-msg">
-                Thanks, {formData.name}. We'll be in touch at<br />{formData.email} within one business day.
+                Thanks! We'll be in touch within one business day.
               </p>
             </div>
           ) : (
-            <>
+            <form action="https://formspree.io/f/mwvrpkqq" method="POST">
               <div className="c-form-title">Send A Message</div>
               <div className="c-form-subtitle">We respond within 1 business day</div>
 
@@ -476,8 +472,7 @@ export default function ContactPage() {
                   className="c-input"
                   name="name"
                   placeholder="John Smith"
-                  value={formData.name}
-                  onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -488,8 +483,7 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   placeholder="john@example.com"
-                  value={formData.email}
-                  onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -499,20 +493,18 @@ export default function ContactPage() {
                   className="c-textarea"
                   name="message"
                   placeholder="Tell us about your project..."
-                  value={formData.message}
-                  onChange={handleChange}
+                  required
                 />
               </div>
 
               <button
                 className="c-submit"
-                onClick={handleSubmit}
-                disabled={!formData.name || !formData.email || !formData.message}
+                type="submit"
               >
                 Send Message →
               </button>
-            </>
-          )}
+            </form>
+            )}
         </div>
       </div>
 

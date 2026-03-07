@@ -34,6 +34,13 @@ export default function LandingPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div style={{ fontFamily: "'Bebas Neue', 'Barlow Condensed', sans-serif", background: "#080c10", color: "#e8e4dc", overflowX: "hidden" }}>
       <style>{`
@@ -363,9 +370,9 @@ export default function LandingPage() {
         {/* ↓ Replace with your logo/company name */}
         <div className="nav-logo">Heritage Built Services</div>
         <ul className="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
+          <li><a href="#" onClick={(e) => e.preventDefault()}>Portfolio</a></li>
+          <li><a href="#" onClick={(e) => e.preventDefault()}>About</a></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
