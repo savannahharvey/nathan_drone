@@ -3,12 +3,6 @@ import { useState } from "react";
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // For demo purposes, just show submitted
-    setSubmitted(true);
-  };
-
   return (
     <div style={{ fontFamily: "'Bebas Neue', sans-serif", background: "#080c10", color: "#e8e4dc", minHeight: "100vh" }}>
       <style>{`
@@ -462,7 +456,7 @@ export default function ContactPage() {
               </p>
             </div>
           ) : (
-            <form action="https://formspree.io/f/mwvrpkqq" method="POST">
+            <form action="https://formspree.io/f/mwvrpkqq" method="POST" onSubmit={() => setSubmitted(true)}>
               <div className="c-form-title">Send A Message</div>
               <div className="c-form-subtitle">We respond within 1 business day</div>
 
