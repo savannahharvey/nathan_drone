@@ -46,9 +46,10 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
         .btn-solid:hover{background:var(--orange-dim); border-color:var(--orange-dim); color:var(--paper);}
         .fade-up{opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease;}
         .fade-up.visible{opacity:1; transform:translateY(0);}
-        .brand-logo{display:block; object-fit:contain;}
-        .brand-logo--mark{width:52px; height:52px;}
-        .brand-logo--lockup{width:min(420px, 80vw);}
+        .brand-logo{display:block; object-fit:contain; max-width:100%; height:auto;}
+        /* Keep natural aspect ratio: set width or height, not both */
+        .brand-logo--mark{width:52px; height:auto;}
+        .brand-logo--lockup{width:min(420px, 80vw); height:auto;} 
         section{padding:110px 0; scroll-margin-top:96px;}
         a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
           outline:2px solid var(--orange); outline-offset:2px;
@@ -256,9 +257,12 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
           .menu-toggle{display:block;}
           .nav-links{gap:16px;}
           .nav-links.is-open{
-            position:absolute; top:100%; left:0; right:0;
-            background:#1d2124; padding:20px 32px; border-top:1px solid var(--steel-600);
+            /* Use a fixed panel so it lays over content cleanly on small screens */
+            position:fixed; top:72px; left:0; right:0; z-index:200;
+            background:#1d2124; padding:20px 20px; border-top:1px solid var(--steel-600);
           }
+          /* Ensure header stays above the nav panel */
+          header{z-index:300;}
           .nav-links.is-open ul{
             display:flex; flex-direction:column; gap:20px; align-items:flex-start;
           }
@@ -272,10 +276,15 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
           /* Reduce header height on small screens and shrink lockup logo */
           header{height:72px;}
           body{padding-top:72px;}
-          .brand-logo--lockup{width:160px;}
+          .brand-logo--lockup{width:140px;}
           .logo-copy strong{font-size:14px;}
           .logo-copy span{font-size:8px;}
           .logo-mark{gap:8px;}
+          /* On very small screens, hide the lockup in header and use the mark only */
+          @media (max-width:360px){
+            .brand-logo--lockup{display:none !important;}
+            .brand-logo--mark{width:44px;}
+          }
         }
         @media (max-width: 520px) {
           .form-row{grid-template-columns:1fr;}
