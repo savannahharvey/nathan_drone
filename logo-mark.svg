@@ -1,0 +1,41 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heritage Built Services logo mark">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(128 128) rotate(90) scale(128)">
+      <stop stop-color="#17242a"/>
+      <stop offset="1" stop-color="#0a1622"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="80" y1="72" x2="176" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d6b06b"/>
+      <stop offset="1" stop-color="#a57f45"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="52" y1="52" x2="204" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6a8790"/>
+      <stop offset="1" stop-color="#324d59"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="24" fill="url(#bg)"/>
+  <circle cx="128" cy="110" r="66" stroke="url(#steel)" stroke-width="4"/>
+  <circle cx="128" cy="110" r="80" stroke="url(#steel)" stroke-width="2" opacity="0.9"/>
+  <circle cx="128" cy="110" r="92" stroke="url(#steel)" stroke-width="2" opacity="0.8"/>
+  <circle cx="128" cy="110" r="102" stroke="url(#steel)" stroke-width="2" opacity="0.7"/>
+  <circle cx="128" cy="110" r="48" stroke="url(#gold)" stroke-width="3" opacity="0.9"/>
+  <path d="M128 36L140 88L128 96L116 88L128 36Z" fill="url(#gold)"/>
+  <path d="M128 184L140 132L128 124L116 132L128 184Z" fill="url(#gold)"/>
+  <path d="M44 110L96 98L104 110L96 122L44 110Z" fill="url(#gold)"/>
+  <path d="M212 110L160 98L152 110L160 122L212 110Z" fill="url(#gold)"/>
+  <path d="M128 60L146 110L128 162L110 110L128 60Z" fill="#6a8790"/>
+  <circle cx="128" cy="110" r="18" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="128" cy="110" r="3.5" fill="url(#gold)"/>
+  <g fill="none" stroke="url(#steel)" stroke-width="2" opacity="0.65">
+    <path d="M128 28V36"/>
+    <path d="M128 184V228"/>
+    <path d="M28 110H44"/>
+    <path d="M212 110H228"/>
+    <path d="M63 45L74 56"/>
+    <path d="M182 164L193 175"/>
+    <path d="M193 45L182 56"/>
+    <path d="M74 164L63 175"/>
+  </g>
+  <path d="M98 102H112V160H100V112H98V102ZM140 102H162C171 102 177 107 177 114C177 120 173 124 167 125C174 127 178 132 178 139C178 149 169 156 158 156H140V102ZM153 112V123H160C164 123 167 121 167 117C167 113 164 112 160 112H153ZM153 133V146H161C166 146 169 143 169 139C169 135 166 133 161 133H153Z" fill="url(#gold)"/>
+  <text x="128" y="218" text-anchor="middle" fill="#e8e4dc" font-size="20" font-family="Inter, Arial, sans-serif" letter-spacing="6">SERVICES</text>
+</svg>

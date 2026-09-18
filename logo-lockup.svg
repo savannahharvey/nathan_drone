@@ -1,0 +1,42 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Heritage Built Services logo">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(450 230) rotate(90) scale(260 450)">
+      <stop stop-color="#17242a"/>
+      <stop offset="1" stop-color="#0a1622"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="280" y1="140" x2="620" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d6b06b"/>
+      <stop offset="1" stop-color="#a57f45"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="220" y1="110" x2="660" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6a8790"/>
+      <stop offset="1" stop-color="#324d59"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="32" fill="url(#bg)"/>
+  <circle cx="450" cy="208" r="122" stroke="url(#steel)" stroke-width="6"/>
+  <circle cx="450" cy="208" r="148" stroke="url(#steel)" stroke-width="3" opacity="0.9"/>
+  <circle cx="450" cy="208" r="170" stroke="url(#steel)" stroke-width="3" opacity="0.8"/>
+  <circle cx="450" cy="208" r="190" stroke="url(#steel)" stroke-width="3" opacity="0.7"/>
+  <circle cx="450" cy="208" r="88" stroke="url(#gold)" stroke-width="5" opacity="0.95"/>
+  <path d="M450 70L468 158L450 170L432 158L450 70Z" fill="url(#gold)"/>
+  <path d="M450 346L468 258L450 246L432 258L450 346Z" fill="url(#gold)"/>
+  <path d="M342 208L430 188L438 208L430 228L342 208Z" fill="url(#gold)"/>
+  <path d="M558 208L470 188L462 208L470 228L558 208Z" fill="url(#gold)"/>
+  <path d="M450 114L480 208L450 300L420 208L450 114Z" fill="#6a8790"/>
+  <circle cx="450" cy="208" r="28" stroke="url(#gold)" stroke-width="4"/>
+  <circle cx="450" cy="208" r="5" fill="url(#gold)"/>
+  <g fill="none" stroke="url(#steel)" stroke-width="3" opacity="0.65">
+    <path d="M450 54V68"/>
+    <path d="M450 348V418"/>
+    <path d="M262 208H286"/>
+    <path d="M614 208H638"/>
+    <path d="M304 96L322 114"/>
+    <path d="M578 302L596 320"/>
+    <path d="M596 96L578 114"/>
+    <path d="M322 302L304 320"/>
+  </g>
+  <path d="M395 194H420V304H398V212H395V194ZM468 194H508C525 194 537 203 537 216C537 227 529 235 517 237C531 240 540 249 540 264C540 282 525 294 506 294H468V194ZM492 214V233H503C510 233 514 229 514 223C514 216 510 214 503 214H492ZM492 245V274H506C515 274 520 268 520 259C520 250 515 245 506 245H492Z" fill="url(#gold)"/>
+  <text x="450" y="408" text-anchor="middle" fill="#e87c1f" font-size="72" font-family="Archivo, Bebas Neue, Arial, sans-serif" font-weight="900" letter-spacing="4">HERITAGE BUILT</text>
+  <text x="450" y="464" text-anchor="middle" fill="#e9e6de" font-size="26" font-family="Inter, Arial, sans-serif" letter-spacing="12">SERVICES</text>
+</svg>
